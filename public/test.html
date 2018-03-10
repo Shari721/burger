@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Eat Da Burger</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+    <script src="https://code.jquery.com/jquery.js"></script>
+
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+
+</head>
+<body>
+	
+
+		<div class="jumbotron">
+
+			<img src="https://1.bp.blogspot.com/-i2e3XPfVwYw/V9GgRgn2Y3I/AAAAAAAAxeM/Ih2LoXrSQr0NBgFKLeupxYNzwGZXBv1VwCLcB/s1600/Hardees-Classic-Double-Cheeseburger.jpg" alt="..." class="img-thumbnail">
+			
+ 			<h1>Eat-Da-Burger!</h1>
+ 			
+ 			<br>
+	
+		<form>
+			<div class="form-group">
+    		<label for="exampleFormControlTextarea1"></label>
+   			<textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+  			</div>
+		</form>
+
+ 			<button type="button" class="btn btn-primary btn-lg">Submit</button>
+
+			<br>
+		
+			<h6>Enter a burger you want to eat and Click the "Submit" Button.</h6>
+
+
+</div>
+</body>
+
+
+  
+
+	<script type="text/javascript">
+
+		function surveyQuery() {
+
+			var currentURL = window.location.origin;
+
+			$.ajax({ url: currentURL + "api/friends", method: "GET"})
+      		.done(function(friendData) {
+			})
+		}
+      	
+      	surveyQuery();
+
+	</script>
+
+</html>
+
+
