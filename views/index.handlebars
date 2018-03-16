@@ -1,1 +1,53 @@
-<h1>{{lunches}}</h1>
+
+<center>
+    <div class="jumbotron">
+        <img id="burger-image" src="/assets/img/exploded-burger.jpg">
+        <h1 id="jumbotron-text">Eat-Da-Burger!</h1>
+    </div>
+
+
+ <section id ="new-burger">
+    <form class="create-update-form" action="/" method="POST">
+
+      <div class="form-group">
+        <textarea id="new-burger-text" rows="4" name="burger_name"></textarea>
+      </div>
+
+      <button type="submit" id="new-burger-submit">Submit</button>
+    </form>
+
+    <p>Enter a burger you want to eat. Click the "Submit" button.</p>
+
+  </section>
+  </form>
+</div>
+
+<div class="col-lg-6">
+  
+<h2>Burgers to eat</h2>
+
+<ol>
+  {{#each burgers}}
+        {{#unless devoured}}
+
+      {{> burgers/burger-block devoured=true}}
+
+{{/unless}} 
+{{/each}}
+</ol>
+</div>
+ 
+ <div class="col-lg-6">
+      <h2>Burgers you have eaten</h2>
+      <ol>
+        <ul>
+  {{#each burgers}}
+    {{#if devoured}}
+      {{> burgers/burger-block devoured=false}}
+    {{/if}}
+  {{/each}}
+      </ol>
+   
+
+  </center>
+</div> 
